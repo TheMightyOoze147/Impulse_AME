@@ -60,7 +60,7 @@ int main(int argc, char* argv[]) {
         auto bitsAfterQAM16 = QAM16Demod.demodulate(noisySymbolsQAM16);
         auto bitsAfterQAM64 = QAM64Demod.demodulate(noisySymbolsQAM64);
 
-        // Запись демодулированных в файл
+        // Запись демодулированных бит в файл
         for (auto bit : bitsAfterQPSK) {
             outputFile << bit;
         }
