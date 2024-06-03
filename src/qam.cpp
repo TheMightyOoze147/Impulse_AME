@@ -36,7 +36,7 @@ std::vector<std::complex<double>> QAMModulator::modulateQAM16(std::vector<bool> 
     std::vector<std::complex<double>> symbols;
 
     for (size_t i = 0; i < bits.size(); i += 4) {
-        // Сдвигаем четыре бита (для QAM16) и объединяет их через ИЛИ, бита 4, поэтому index принимает значения от 0 до 15 -- 16 значений
+        // Сдвига четырёх бит (для QAM16) и объединение их через ИЛИ; бита 4, поэтому index принимает значения от 0 до 15 -- 16 значений
         int index = (bits[i] << 3) | (bits[i + 1] << 2) | (bits[i + 2] << 1) | bits[i + 3];
         
         // Извлечение двух младших бит index для real и двух старших бит для imag; 
