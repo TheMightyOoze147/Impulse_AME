@@ -89,7 +89,7 @@ std::vector<bool> QAMDemodulator::demodulateQPSK(const std::vector<std::complex<
     std::vector<bool> bits;
     for (const auto& symbol : symbols) {
         // Сравнение возвращает true, если квадратура больше 0 или false в ином случае,
-        // соответственно 1 или 0. 
+        // что соответствует 1 или 0. 
         bits.push_back(symbol.real() > 0);
         bits.push_back(symbol.imag() > 0);
     }
