@@ -6,6 +6,7 @@
 
 // Конструктор класса QAMModulator, инициализирует тип модуляции
 QAMModulator::QAMModulator(QAMType type) : type(type) {}
+QAMModulator::~QAMModulator() {}
 
 // Метод для модуляции данных в соответствии с выбранным типом QAM
 std::vector<std::complex<double>> QAMModulator::modulate(const std::vector<bool>& bits) {
@@ -71,6 +72,8 @@ std::vector<std::complex<double>> QAMModulator::modulateQAM64(std::vector<bool> 
 
 // Конструктор класса QAMDemodulator, инициализирует тип модуляции
 QAMDemodulator::QAMDemodulator(QAMType type) : type(type) {}
+QAMDemodulator::~QAMDemodulator() {}
+
 
 // Метод для демодуляции данных в соответствии с выбранным типом QAM
 std::vector<bool> QAMDemodulator::demodulate(const std::vector<std::complex<double>>& symbols) {

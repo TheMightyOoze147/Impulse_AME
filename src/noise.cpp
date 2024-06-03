@@ -2,7 +2,7 @@
 
 // Конструктор, принимает стандартное отклонение для гауссовского шума
 GaussianNoiseAdder::GaussianNoiseAdder(double sigma) : sigma(sigma) {};
-
+GaussianNoiseAdder::~GaussianNoiseAdder() {}
 // Метод для добавления гауссовского шума к вектору символов
 std::vector<std::complex<double>> GaussianNoiseAdder::addNoise(const std::vector<std::complex<double>>& symbols) {
     std::default_random_engine generator;

@@ -9,6 +9,7 @@ enum class QAMType { QPSK, QAM16, QAM64 };
 class QAMModulator {
 public:
     QAMModulator(QAMType type);
+    ~QAMModulator();
     std::vector<std::complex<double>> modulate(const std::vector<bool>& bits);
 
 private:
@@ -21,6 +22,7 @@ private:
 class QAMDemodulator {
 public:
     QAMDemodulator(QAMType type);
+    ~QAMDemodulator();
     std::vector<bool> demodulate(const std::vector<std::complex<double>>& symbols);
 private:
     QAMType type;

@@ -7,6 +7,7 @@
 class GaussianNoiseAdder {
 public:
     GaussianNoiseAdder(double sigma);
+    ~GaussianNoiseAdder();
     std::vector <std::complex<double>> addNoise(const std::vector<std::complex<double>>& symbols);
 
 private:
