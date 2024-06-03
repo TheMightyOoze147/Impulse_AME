@@ -4,7 +4,7 @@ CC = g++
 CFLAGS = -std=c++20
 
 all:
-# Сборка объектных файлов
+# Сборка объектных файлов и исполняемого файла
 	mkdir -p build
 	$(CC) $(CFLAGS) -c src/noise.cpp -o build/noise.o
 	$(CC) $(CFLAGS) -c src/qam.cpp -o build/qam.o
