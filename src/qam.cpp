@@ -24,7 +24,7 @@ std::vector<std::complex<double>> QAMModulator::modulateQPSK(std::vector<bool> b
     std::vector<std::complex<double>> symbols;
     for (size_t i = 0; i < bits.size(); i += 2) {
         // Маппинг I и Q по каждым двум битам последовательности;
-        // Каждая квадратура ринимает значения 1 или -1
+        // Каждая квадратура принимает значения 1 или -1
         symbols.push_back(std::complex<double>(bits[i] ? 1 : -1, bits[i + 1] ? 1 : -1));
     }
 
