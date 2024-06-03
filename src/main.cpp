@@ -76,7 +76,7 @@ int main(int argc, char* argv[]) {
         }
         outputFile << std::endl;
 
-        // Вывод статистики в терминал
+        // Вывод статистики в терминал, если был передан флаг 1
         if (enable_logging == "1") {
             std::cout << "Dispersion: " << i << std::endl << std::endl;
             std::cout << "Bits before any modulation:" << std::endl;
