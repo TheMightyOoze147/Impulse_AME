@@ -14,14 +14,14 @@ int main(int argc, char* argv[]) {
     srand(time(NULL));
 
     // Инициализация модуляторов
-    QAMModulator qpskMod(QPSK);
-    QAMModulator QAM16Mod(QAM16);
-    QAMModulator QAM64Mod(QAM64);
+    QAMModulator qpskMod(QAMType::QPSK);
+    QAMModulator QAM16Mod(QAMType::QAM16);
+    QAMModulator QAM64Mod(QAMType::QAM64);
 
     // Инициализация демодуляторов
-    QAMDemodulator qpskDemod(QPSK);
-    QAMDemodulator QAM16Demod(QAM16);
-    QAMDemodulator QAM64Demod(QAM64);
+    QAMDemodulator qpskDemod(QAMType::QPSK);
+    QAMDemodulator QAM16Demod(QAMType::QAM16);
+    QAMDemodulator QAM64Demod(QAMType::QAM64);
 
     // Создание файла для записи статистики
     std::ofstream outputFile("result.txt");

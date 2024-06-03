@@ -4,7 +4,7 @@
 #include <vector>
 #include <complex>
 
-enum QAMType { QPSK, QAM16, QAM64 };
+enum class QAMType { QPSK, QAM16, QAM64 };
 
 class QAMModulator {
 public:
@@ -24,9 +24,9 @@ public:
     std::vector<bool> demodulate(const std::vector<std::complex<double>>& symbols);
 private:
     QAMType type;
-    std::vector<bool> demodulateQPSK(const std::vector<std::complex<double>>& symbols);
-    std::vector<bool> demodulateQAM16(const std::vector<std::complex<double>>& symbols);
-    std::vector<bool> demodulateQAM64(const std::vector<std::complex<double>>& symbols);
+    std::vector<bool> demodulateQPSK(std::vector<std::complex<double>> symbols);
+    std::vector<bool> demodulateQAM16(std::vector<std::complex<double>> symbols);
+    std::vector<bool> demodulateQAM64(std::vector<std::complex<double>> symbols);
 };
 
 #endif
