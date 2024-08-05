@@ -74,7 +74,6 @@ std::vector<std::complex<double>> QAMModulator::modulateQAM64(std::vector<bool> 
 QAMDemodulator::QAMDemodulator(QAMType type) : type(type) {}
 QAMDemodulator::~QAMDemodulator() {}
 
-
 // Метод для демодуляции данных в соответствии с выбранным типом QAM
 std::vector<bool> QAMDemodulator::demodulate(const std::vector<std::complex<double>>& symbols) {
     std::vector<bool> bits;
